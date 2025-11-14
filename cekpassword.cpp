@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     bool valid=false,weak=true;
-    string numbers= "0123456789"; //lol ayo banyak banyakan commit
+    string numbers= "0123456789"; //lol ayo banyak banyakan commit lmaooo
     string lowercase= "abcdefghijklmnopqrstuvwxyz";
     string uppercase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string special= "!@#$%^&*()-+=,.<>?/;{}[]|\"";
