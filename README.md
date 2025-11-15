@@ -54,4 +54,4 @@ Program menentukan level kekuatan password berdasarkan aturan berikut:
 ## 🚀 Cara Menjalankan
 1. Kompilasi program:
    ```bash
-   g++ password_checker.cpp -o password_checker
+   g++ cekpassword.cpp -o cekpassword
