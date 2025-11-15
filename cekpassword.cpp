@@ -61,7 +61,7 @@ int main(){
             kurang++;
         }
     }
-    //cek ke abstrakan ketika password tidak menggunakan angka dan karakter special
+    //cek ke abstrakan ketika password tidak menggunakan angka dan char special
     if(hash[3]==0 && hash[0]==0){
         for(int i=1; i<n; i++){
         string vokal="aiueoAIUEO";
@@ -78,6 +78,7 @@ int main(){
     if(hash[3]==0 && hash[0]==0 && abstrak){
         weak=false;
     }
+    
     if(n>=8){
         valid=true;
     }
