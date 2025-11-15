@@ -27,7 +27,7 @@ Hasil pengecekan disimpan dalam array `hash[4]`.
 - Password dianggap **valid** jika panjangnya ≥ 8 karakter.
 
 ### 5. Pengecekan Tingkat Kekuatan
-Program menentukan level kekuatan password berdasarkan aturan berikut:
+Program menentukan level kekuatan password berdasarkan aturan aturan berikut:
 
 | Level        | Syarat                                                                 |
 |--------------|------------------------------------------------------------------------|
