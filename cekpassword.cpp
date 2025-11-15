@@ -97,7 +97,7 @@ int main(){
         weak=false;
     }
     if(!valid){
-        cout <<"Password yang anda masukkan tidak valid! ";
+        cout <<"Password yang anda masukkan invalid! ";
     }
     if(weak){
         cout << "Password yang anda buat terlalu mudah!";
