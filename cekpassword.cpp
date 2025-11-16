@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+void garis();
+void awal();
 
 int main(){
     bool valid=false,weak=true;
@@ -8,20 +10,23 @@ int main(){
     string uppercase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string special= "!@#$%^&*()-+=,.<>?/;{}[]|\"";
     int hash[4]={0,0,0,0};
-    cout << "Program pengecekan password" << endl;
+    awal();
     int cekbrp=0;
     while(!valid || weak){
+        
     for(int i = 0; i < 4; i++){
         hash[i] = 0;
     }
-    bool medium=false,strong=false, verystrong=false, abstrak=false;
+    
+    bool medium=false,strong=false, verystrong=false, abstrak=false, tuwaga=false;
     valid=false;
     weak=true;
     int indnum=1,indlow=1,indup=1,indspec=1;
     if(cekbrp==0){
         cout << "Masukkan Password yang akan di cek: ";
     } else if(cekbrp!=0){
-        cout << endl << " Masukkan ulang password yang akan di cek: ";
+        garis();
+        cout << endl << "Masukkan ulang password yang akan di cek: ";
     } 
     cekbrp++;
     string pass;
@@ -61,23 +66,34 @@ int main(){
             kurang++;
         }
     }
-    //cek ke abstrakan ketika password tidak menggunakan angka dan karakter special
-    if(hash[3]==0 && hash[0]==0){
+    //cek ke abstrakan ketika password tidak menggunakan angka dan char special
         for(int i=1; i<n; i++){
         string vokal="aiueoAIUEO";
         bool prevvokal= vokal.find(pass[i-1]) != string::npos;
         bool nowvokal= vokal.find(pass[i]) != string::npos;
+        bool depannya_angka= numbers.find(pass[i]) != string ::npos;
 
-        if(!prevvokal && !nowvokal && pass[i]!=pass[i-1]){
-        abstrak=true;
-        break;
-        }
+        if(!prevvokal && !nowvokal && pass[i]!=pass[i-1] &&
+   pass[i-1]!='f' && pass[i-1]!='F' &&
+   pass[i-1]!='v' && pass[i-1]!='V' &&
+   !depannya_angka){
+    abstrak = true;
+    break;
+}
+    }
+
+    if(n >= 3){
+    if(pass[n-3] == '1' && pass[n-2] == '2' && pass[n-1] == '3'){
+        tuwaga=true;
     }
     }
 
-    if(hash[3]==0 && hash[0]==0 && abstrak){
-        weak=false;
+   
+    if(!(hash[0] == 0 && hash[3] == 0 && !abstrak) &&
+   !(hash[0] != 0 && hash[3] == 0 && !abstrak && tuwaga)){
+    weak = false;
     }
+
     if(n>=8){
         valid=true;
     }
@@ -85,7 +101,7 @@ int main(){
         medium=true;
         weak=false;
     }
-    if(hash[0]>0){
+    if(hash[0]>0 && !tuwaga ||(hash[2]!=0 && tuwaga && hash[0] > 0) ){
         strong=true;
         medium=false;
         weak=false;
@@ -97,11 +113,30 @@ int main(){
         weak=false;
     }
     if(!valid){
-        cout <<"Password yang anda masukkan tidak valid! ";
+        cout <<"Password yang anda masukkan invalid! ";
+    }
+    if(weak && !valid){
+        cout << "serta ";
     }
     if(weak){
         cout << "Password yang anda buat terlalu mudah!";
     }
 }
     return 0;
+}
+void garis(){
+    cout << endl<<"====================================================================================================";
+}
+void awal(){
+    cout << "+======================================================================================+\n";
+    cout << "|                                                                                      |\n";
+    cout << "|                          PROGRAM PENGECEKAN PASSWORD                                 |\n";
+    cout << "|      Program C++ sederhana untuk cek validitas dan tingkat kekuatan password         |\n";
+    cout << "|                                                                                      |\n";
+    cout << "|      RULES: password yang dimasukkan harus 8 digit atau lebih                        |\n";
+    cout << "|                                                                                      |\n";
+    cout << "|                                                                                      |\n";
+    cout << "|                                                                                      |\n";
+    cout << "|                                                                                      |\n";
+    cout << "+======================================================================================+\n";
 }
