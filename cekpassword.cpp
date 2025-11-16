@@ -122,6 +122,13 @@ int main(){
         cout << "Password yang anda buat terlalu mudah!";
     }
 }
+    
+    if(!weak && valid){
+    cout << "Level password anda adalah: ";
+    if(medium) cout << "medium";
+    if(strong) cout << "kuat";
+    if(verystrong) cout << "sangatkuat";
+ }
     return 0;
 }
 void garis(){
