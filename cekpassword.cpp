@@ -120,15 +120,35 @@ int main(){
     }
     if(weak){
         cout << "Password yang anda buat terlalu mudah!";
+     
+        
+    cout << endl << "Saran untuk meningkatkan keamanan password:" << endl;
+
+    if(hash[0] == 0){
+        cout << "- Password anda terlalu mudah, tambahkan angka agar lebih kuat." << endl;
+    }
+    if(hash[1] == 0){
+        cout << "- Tambahkan huruf kecil untuk variasi karakter." << endl;
+    }
+    if(hash[2] == 0){
+        cout << "- Tambahkan huruf besar agar password lebih sulit ditebak." << endl;
+    }
+    if(hash[3] == 0){
+        cout << "- Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan." << endl;
     }
 }
-    
-    if(!weak && valid){
+
+if(!weak && valid){
     cout << "Level password anda adalah: ";
     if(medium) cout << "medium";
     if(strong) cout << "kuat";
     if(verystrong) cout << "sangatkuat";
  }
+
+    }
+
+    
+    
     return 0;
 }
 void garis(){
