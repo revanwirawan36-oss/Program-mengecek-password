@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 void garis();
 void awal();
@@ -12,6 +14,9 @@ int main(){
     int hash[4]={0,0,0,0};
     awal();
     int cekbrp=0;
+
+    srand(time(NULL));
+
     while(!valid || weak){
         
     for(int i = 0; i < 4; i++){
@@ -27,7 +32,7 @@ int main(){
     } else if(cekbrp!=0){
         garis();
         cout << endl << "Masukkan ulang password yang akan di cek: ";
-    } 
+    }
     cekbrp++;
     string pass;
     cin >> pass;
@@ -60,12 +65,6 @@ int main(){
         }
     }
     
-    int kurang=0;
-    for(int i=0; i<4; i++){
-        if(hash[i]==0){
-            kurang++;
-        }
-    }
     //cek ke abstrakan ketika password tidak menggunakan angka dan char special
         for(int i=1; i<n; i++){
         string vokal="aiueoAIUEO";
@@ -118,11 +117,10 @@ int main(){
     if(weak && !valid){
         cout << "serta ";
     }
-    if(weak){
-        cout << "Password yang anda buat terlalu mudah!";
-     
-        
-    cout << endl << "Saran untuk meningkatkan keamanan password:" << endl;
+    if(weak||medium){
+        if(weak) cout << "Password yang anda buat terlalu mudah!";
+        if(medium) cout << "password yang anda buat terlalu basic";
+        cout << endl << "Saran untuk meningkatkan keamanan password:" << endl;
 
     if(hash[0] == 0){
         cout << "- Password anda terlalu mudah, tambahkan angka agar lebih kuat." << endl;
@@ -136,19 +134,42 @@ int main(){
     if(hash[3] == 0){
         cout << "- Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan." << endl;
     }
-}
+    }
 
+    int kurang=8-pass.length();
 if(!weak && valid){
     cout << "Level password anda adalah: ";
     if(medium) cout << "medium";
     if(strong) cout << "kuat";
     if(verystrong) cout << "sangatkuat";
  }
+    cout << endl;
+    if(!valid || weak || medium){
+        cout << "Rekomendasi Password: " << pass;
+        int randomangka = rand() % 10;
+        int randomlowcase = rand() % 26;
+        int randomupcase = rand() % 26;
+        int randomspecial = rand() % 27;
 
+        if(kurang<=0){
+        if(hash[0]==0) cout << numbers[randomangka];
+        if(hash[1]==0) cout << lowercase[randomlowcase];
+        if(hash[2]==0) cout << uppercase[randomupcase];
+        if(hash[3]==0) cout << special[randomspecial];
+        }
+
+        if(kurang>0){
+        while(1>0){
+        if(hash[0]==0){ cout << numbers[randomangka]; kurang--;}
+        if(hash[1]==0){ cout << lowercase[randomlowcase]; kurang--;}
+        if(hash[2]==0){ cout << uppercase[randomupcase]; kurang--;}
+        if(hash[3]==0){ cout << special[randomspecial]; kurang--;}
+        if(kurang<=0) break;
+        }
     }
-
     
-    
+    }
+}
     return 0;
 }
 void garis(){
@@ -160,10 +181,10 @@ void awal(){
     cout << "|                          PROGRAM PENGECEKAN PASSWORD                                 |\n";
     cout << "|      Program C++ sederhana untuk cek validitas dan tingkat kekuatan password         |\n";
     cout << "|                                                                                      |\n";
-    cout << "|      RULES: password yang dimasukkan harus 8 digit atau lebih                        |\n";
+    cout << "|              RULES: password yang dimasukkan harus 8 digit atau lebih                |\n";
+    cout << "|               ****************************************************                   |\n";
     cout << "|                                                                                      |\n";
-    cout << "|                                                                                      |\n";
-    cout << "|                                                                                      |\n";
+    cout << "|                         **********************************                           |\n";
     cout << "|                                                                                      |\n";
     cout << "+======================================================================================+\n";
 }
