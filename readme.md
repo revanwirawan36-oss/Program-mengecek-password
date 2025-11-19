@@ -42,24 +42,27 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
 
 1. Cara Kerja Program Secara Umum
 
-        Program ini adalah Password Strength Checker, tugasnya:
-        a. Meminta user memasukkan password.
-        b. Memeriksa isi password:
-            -ada angka?
-            -ada huruf kecil?
-            -ada huruf besar?
-            -ada simbol?
-        c. Memeriksa apakah password bersifat abstrak (gabungan huruf yang tidak umum).
-        d. Memeriksa apakah password mengandung pola 123 di akhir (tuwaga).
-        e. Menentukan kekuatan password:
-            -Weak
-            -Medium
-            -Strong
-            -Very Strong
-        f. Jika password lemah → tampilkan saran
-        g. Beri rekomendasi password baru.
+        Program akan melakukan beberapa langkah:
 
-    Program terus meminta input ulang selama password belum valid atau masih weak.
+        1. User memasukkan password.
+        2. Program membaca isi password dan menghitung:
+            a. jumlah angka
+            b. jumlah huruf kecil
+            c. jumlah huruf besar
+            d. jumlah karakter spesial
+        3. Program melakukan pengecekan khusus:
+            a. apakah password mengandung pola abstrak
+            b. apakah password berakhir dengan "123"
+        4. Program menentukan kategori password:
+            a. Weak (Lemah)
+            b. Medium (Sedang)
+            c. Strong (Kuat)
+            d. Very Strong (Sangat Kuat)
+        5. Jika password masih terlalu lemah atau invalid,
+        program meminta user memasukkan ulang password.
+        6. Program memberikan:
+            a. saran perbaikan password
+            b. rekomendasi password yang lebih kuat
 
 2. Cara Program Mengecek Jenis Karakter
 
@@ -100,28 +103,28 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
 
 ## ♻️Alur Logika IF–ELSE 
 
-A. Weak
+A. Mengecek apakah password valid
+
+    if (n >= 8) valid = true;
+    Password harus minimal 8 karakter agar valid.
+
+B. Mengecek apakah password Weak
 
     Weak berarti password terlalu sederhana.
-    Program akan menandai password sebagai bukan Weak (weak = false) jika:
-        a. ada karakter valid (huruf/angka/simbol)
-        b. TIDAK hanya huruf kecil
-        c. TIDAK hanya huruf + tanpa simbol saat abstrak + tuwaga
+    Password dianggap tidak Weak jika:
+        - memiliki karakter variatif
+        - tidak hanya huruf kecil
+        - tidak kombinasi lemah tertentu saat abstrak/tuwaga aktif
 
-    Atau simpelnya, jika password punya isi yang lumayan → tidak weak
+    Jika syarat lain tidak terpenuhi, password dianggap Weak.
 
-B. Valid
+C. Menentukan Medium
 
-    Password valid hanya jika panjang ≥ 8
+    Password masuk kategori Medium ketika:
+    - Panjang ≥ 8 (valid)
+    - Mengandung minimal 2 jenis karakter yang berbeda:
 
-        if(n >= 8){
-            valid = true;
-        }
-
-C. Medium
-
-    Medium = password memiliki min 2 jenis karakter berbeda dan panjang ≥ 8.
-    Syaratnya:
+    Contoh kombinasi:
         1. angka + huruf kecil
         2. angka + huruf besar
         3. angka + simbol
@@ -134,24 +137,24 @@ C. Medium
         "HELLO12"
         "abc#xyz0"
 
-D. Strong
+D. Menentukan Strong
 
-    Strong = password:
-        1. Panjang ≥ 8
+    Password masuk kategori Strong jika:
+        1. Valid (≥ 8 karakter)
         2. Memiliki minimal 3 jenis karakter
-        3. Harus mengandung huruf besar
-        4. Jika password berakhir “123” → wajib ada angka + huruf besar
+        3. Mengandung huruf besar
+        4. Jika password berakhir dengan "123" (tuwaga), maka harus ada huruf besar + angka
 
     Contoh Strong:
         “Abcde#12”
         “TesT1234”
         “aB1!!!!”
 
-E. Very Strong
+E. Menentukan Very Strong
 
-    Very Strong :
+    Password dianggap Very Strong bila:
         a. Panjang minimal 12
-        b. Mengandung semua jenis karakter
+        b. Mengandung semua jenis karakter (angka, huruf kecil, huruf besar, simbol)
         c. Simbol >= 3
         d. Tidak abstrak
 
