@@ -134,6 +134,7 @@ int main(){
         medium = false;
         weak = false;
     }
+
     if(!valid){
         cout <<"Password yang anda masukkan invalid! ";
     }
@@ -159,7 +160,7 @@ int main(){
     }
     }
 
-    int kurang=8-pass.length();
+    int kurang = 8-pass.length();
 if(!weak && valid){
     cout << "Level password anda adalah: ";
     if(medium) cout << "medium";
