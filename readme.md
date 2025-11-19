@@ -71,4 +71,5 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
     Mengandung minimal 3 karakter spesial
     Kombinasi ini langsung dianggap paling aman
 
-![Tengkiu](URL) {Link: Mediumhttps://share.google/UYzMtQ8nID66mrIrC}
+
+![Tengkiu](URL) {Link: Medium https://share.google/UYzMtQ8nID66mrIrC}
