@@ -42,22 +42,22 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
 
 1. Cara Kerja Program Secara Umum
 
-    Program ini adalah Password Strength Checker, tugasnya:
-     a. Meminta user memasukkan password.
-     b. Memeriksa isi password:
-        -ada angka?
-        -ada huruf kecil?
-        -ada huruf besar?
-        -ada simbol?
-     c. Memeriksa apakah password bersifat abstrak (gabungan huruf yang tidak umum).
-     d. Memeriksa apakah password mengandung pola 123 di akhir (tuwaga).
-     e. Menentukan kekuatan password:
-        -Weak
-        -Medium
-        -Strong
-        -Very Strong
-     f. Jika password lemah → tampilkan saran
-     g. Beri rekomendasi password baru.
+        Program ini adalah Password Strength Checker, tugasnya:
+        a. Meminta user memasukkan password.
+        b. Memeriksa isi password:
+            -ada angka?
+            -ada huruf kecil?
+            -ada huruf besar?
+            -ada simbol?
+        c. Memeriksa apakah password bersifat abstrak (gabungan huruf yang tidak umum).
+        d. Memeriksa apakah password mengandung pola 123 di akhir (tuwaga).
+        e. Menentukan kekuatan password:
+            -Weak
+            -Medium
+            -Strong
+            -Very Strong
+        f. Jika password lemah → tampilkan saran
+        g. Beri rekomendasi password baru.
 
     Program terus meminta input ulang selama password belum valid atau masih weak.
 
