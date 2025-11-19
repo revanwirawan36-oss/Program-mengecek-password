@@ -14,11 +14,11 @@
     • Mengandung angka
     • Mengandung simbol khusus seperti @*%#
     
-    Program ini akan membaca kata sandi yang dimasukkan dan kemudian memeriksa semua kriteria yang ada. Jika
-    semua persyaratan terpenuhi, program akan menampilkan pesan yang menyatakan bahwa kata sandi "Aman Digunakan."
-    Namun, jika ada persyaratan yang tidak terpenuhi, program akan memberikan penjelasan mengenai informasi yang
-    hilang, seperti memunculkan kalimat "Kata Sandi Tidak Memiliki Angka" atau “Kata Sandi Tidak Memiliki Simbol
-    Khusus”.
+    Program ini akan membaca kata sandi yang dimasukkan dan kemudian memeriksa semua kriteria yang ada.
+    Jika semua persyaratan terpenuhi, program akan menampilkan pesan yang menyatakan bahwa kata sandi
+    "Aman Digunakan." Namun, jika ada persyaratan yang tidak terpenuhi, program akan memberikan penjelasan
+    mengenai informasi yang hilang, seperti memunculkan kalimat "Kata Sandi Tidak Memiliki Angka" atau
+    “Kata Sandi Tidak Memiliki Simbol Khusus”.
 
 Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai salah satu solusi untuk memastikan setiap mahasiswa membuat kata sandi yang kuat saat mendaftar ke sistem informasi akademik. Karena saat ini masih banyak mahasiswa yang masih kesulitan dalam membuat password yang aman, sehingga terciptalah program ini untuk membantu mengecek apakah password yang di input memenui aturan keamanan atau tidak.
 
