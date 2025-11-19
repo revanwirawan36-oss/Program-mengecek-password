@@ -1,6 +1,6 @@
-# <span style="color: black"> PROGRAM CEK PASSWORD
+# PROGRAM CEK PASSWORD
 
-## <span style="color: lightblue"> Studi Kasus 
+## Studi Kasus 
         Di sebuah universitas, sistem keamanan sangat penting untuk melindungi informasi pribadi mahasiswa
         dari akses yang tidak sah. Setiap mahasiswa diwajibkan untuk membuat kata sandi yang kuat saat
         mendaftar akun di sistem informasi kampus. Namun, banyak mahasiswa masih bingung tentang cara membuat
@@ -22,7 +22,7 @@
 
 Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai salah satu solusi untuk memastikan setiap mahasiswa membuat kata sandi yang kuat saat mendaftar ke sistem informasi akademik. Karena saat ini masih banyak mahasiswa yang masih kesulitan dalam membuat password yang aman, sehingga terciptalah program ini untuk membantu mengecek apakah password yang di input memenui aturan keamanan atau tidak.
 
-## <span style="color: lightblue">Fitur Utama
+## Fitur Utama
     Fitur Utama dari program ini antara lain
     - Mengecek apakah password valid (minimal 8 karakter).
     - Mengecek apakah password mengandung:
@@ -38,9 +38,9 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
     - Memberikan saran otomatis untuk memperbaiki password.
     - Memberikan rekomendasi password dengan tambahan karakter acak.
 
-## <span style="color: lightblue">Cara Kerja
+## Cara Kerja
 
-## <span style="color: lightblue">Alur Logika IF–ELSE 
+## Alur Logika IF–ELSE 
     Cek apakah panjang password >= 8?
         Jika tidak → invalid + lemah
     Cek apakah ada huruf kecil?
@@ -59,7 +59,7 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
     Cek password sangat kuat:
         - karakter spesial ≥ 3
 
-## <span style="color: lightblue">Syarat Setiap Level Password 
+## Syarat Setiap Level Password 
     🔴 Password Lemah
     Kurang dari 8 karakter
     Tidak mengandung angka
