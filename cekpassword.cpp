@@ -96,20 +96,43 @@ int main(){
     if(n>=8){
         valid=true;
     }
-    if(hash[2]>=2){
-        medium=true;
-        weak=false;
+    if(valid &&
+        (
+        (hash[0] > 0 && hash[1] > 0) || 
+        (hash[0] > 0 && hash[2] > 0) || 
+        (hash[0] > 0 && hash[3] > 0) || 
+        (hash[1] > 0 && hash[2] > 0) || 
+        (hash[1] > 0 && hash[3] > 0) || 
+        (hash[2] > 0 && hash[3] > 0)    
+        )
+    ){
+        medium = true;
+        weak = false;
     }
-    if(hash[0]>0 && !tuwaga ||(hash[2]!=0 && tuwaga && hash[0] > 0) ){
-        strong=true;
-        medium=false;
-        weak=false;
+
+    if(valid &&
+    (
+       
+        (hash[0]>0 && hash[1]>0 && hash[2]>0) ||
+        (hash[0]>0 && hash[1]>0 && hash[3]>0) ||
+        (hash[0]>0 && hash[2]>0 && hash[3]>0) ||
+        (hash[1]>0 && hash[2]>0 && hash[3]>0)
+    ) &&
+    (
+        (hash[2] > 0 && !tuwaga) ||             
+        (tuwaga && hash[2] > 0 && hash[0] > 0)
+    ))
+    {
+        strong = true;
+        medium = false;
+        weak = false;
     }
-    if(hash[3]>=3){
-        verystrong=true;
-        strong=false;
-        medium=false;
-        weak=false;
+
+   if (n >= 12 && hash[0] > 0 && hash[1] > 0 && hash[2] > 0 && hash[3] >= 3 && !abstrak){
+        verystrong = true;
+        strong = false;
+        medium = false;
+        weak = false;
     }
     if(!valid){
         cout <<"Password yang anda masukkan invalid! ";
