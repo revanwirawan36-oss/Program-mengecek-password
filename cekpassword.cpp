@@ -1,3 +1,5 @@
+//bagian revan
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -97,6 +99,7 @@ int main(){
     if(n>=8){
         valid=true;
     }
+    //bagian myranda
     if(valid &&
         (
         (hash[0] > 0 && hash[1] > 0) || 
@@ -135,13 +138,14 @@ int main(){
         medium = false;
         weak = false;
     }
-    
+
     if(!valid){
         cout <<"Password yang anda masukkan invalid! ";
     }
     if(weak && !valid){
         cout << "serta ";
     }
+    //bagian siti suhaira
     if(weak||medium){
         if(weak) cout << "Password yang anda buat terlalu mudah!";
         if(medium) cout << "password yang anda buat terlalu basic";
@@ -169,6 +173,7 @@ if(!weak && valid){
     if(verystrong) cout << "sangatkuat";
  }
     cout << endl;
+    //bagian nadia putri azahra
     if(!valid || weak || medium){
         cout << "Rekomendasi Password: " << pass;
         int randomangka = rand() % 10;
@@ -182,14 +187,8 @@ if(!weak && valid){
         if(hash[2]==0) cout << uppercase[randomupcase];
         if(hash[3]==0) cout << special[randomspecial];
         }
-        if(kurang>0 && hash[0]!=0 && hash[1]!=0 && hash[2]!=0 && hash[3]!=0){
-            string temporer=pass;
-            while(temporer.length()<8){
-            temporer+=temporer;
-            } cout << temporer;
-            
-        }
-        else if(kurang>0){
+
+        if(kurang>0){
         while(1>0){
         if(hash[0]==0){ cout << numbers[randomangka]; kurang--;}
         if(hash[1]==0){ cout << lowercase[randomlowcase]; kurang--;}
@@ -200,6 +199,7 @@ if(!weak && valid){
     }
     
     }
+    //bagian riska
         if(valid && !weak){
         cout << endl << "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : ";
         cin >> pilihan;
@@ -212,6 +212,7 @@ if(!weak && valid){
 }
     return 0;
 }
+//bagian revan
 void garis(){
     cout << endl<<"====================================================================================================";
 }
