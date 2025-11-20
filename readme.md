@@ -120,12 +120,12 @@ Program juga memberikan penjelasan kenapa password lemah, saran agar password le
  5. Cara Kerja Tampilan Memberitahukan User Kriteria Passwordnya
  
       (Level password anda adalah: ... )
-            a. Valid 
-            b. Invalid : Password yang anda masukkan invalid!
-            c. Weak (Lemah) : Password yang anda buat terlalu mudah!
-            d. Medium (Sedang) : password yang anda buat terlalu basic
-            e. Strong (Kuat)
-            f. Very Strong (Sangat Kuat)
+             a. Valid 
+             b. Invalid : Password yang anda masukkan invalid!
+             c. Weak (Lemah) : Password yang anda buat terlalu mudah!
+             d. Medium (Sedang) : password yang anda buat terlalu basic
+             e. Strong (Kuat)
+             f. Very Strong (Sangat Kuat)
     
      Jika password lemah, medium, atau kuat akan menampilkan syarat karakter apa saja yang perlu ditambahkan ulang. Seperti :
          - Password anda terlalu mudah, tambahkan angka agar lebih kuat
