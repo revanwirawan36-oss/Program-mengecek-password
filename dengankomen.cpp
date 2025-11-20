@@ -1,4 +1,3 @@
-
 #include <iostream> //membuka library iostream
 #include <ctime> //membuka library time untuk srand
 #include <cstdlib> //membuka library stdlib untuk fungsi random (rand, srand)
@@ -204,7 +203,7 @@ if(!weak && valid){
         }
         //menambahkan karakter sampai panjang minimum tercapai
         else if(kurang>0){
-        while(1>0){ //looping sampai tak terbatas sampai syarat terpenuhi
+        while(1>0){
         if(hash[0]==0){ cout << numbers[randomangka]; kurang--;}
         if(hash[1]==0){ cout << lowercase[randomlowcase]; kurang--;}
         if(hash[2]==0){ cout << uppercase[randomupcase]; kurang--;}
