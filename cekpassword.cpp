@@ -99,7 +99,7 @@ int main(){
     if(n>=8){
         valid=true;
     }
-    //bagian myranda
+    
     if(valid &&
         (
         (hash[0] > 0 && hash[1] > 0) || 
