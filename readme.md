@@ -22,19 +22,29 @@
 
 Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai salah satu solusi untuk memastikan setiap mahasiswa membuat kata sandi yang kuat saat mendaftar ke sistem informasi akademik. Karena saat ini masih banyak mahasiswa yang masih kesulitan dalam membuat password yang aman, sehingga terciptalah program ini untuk membantu mengecek apakah password yang di input memenui aturan keamanan atau tidak.
 
+Program ini dibuat untuk mengecek validitas dan tingkat kekuatan password berdasarkan jenis karakter yang digunakan, panjang password, serta beberapa pola tertentu.
+Program akan menilai password dalam empat level yaitu, Lemah (weak), Medium, Kuat (strong), Sangat kuat (very strong).
+
+Program juga memberikan penjelasan kenapa password lemah, saran agar password lebih aman serta rekomendasi password yang lebih kuat maupun fitur cek password berulang kali.
+
+
 ## ✨Fitur Utama
     Fitur Utama dari program ini antara lain
     - Mengecek apakah password valid (minimal 8 karakter).
     - Mengecek apakah password mengandung:
         > Huruf kecil
-        > huruf besar
-        > angka
-        > karakter spesial (@, #, %, *, dll)
-    - Menentukan level kekuatan password:
+        > Huruf besar
+        > Angka
+        > Karakter spesial (@, #, %, *, dll)
+    - Menmberikan level kekuatan password:
         > Lemah
         > Medium
         > Kuat
         > Sangat Kuat
+    - Deteksi pola:
+        > Password abstrak (kombinasi tertentu dari huruf non-vokal)
+        > Password berakhiran "123" (disebut tuwaga)
+    - Memberikan saran peningkatan keamanan
     - Memberikan saran otomatis untuk memperbaiki password.
     - Memberikan rekomendasi password dengan tambahan karakter acak.
 
@@ -46,23 +56,28 @@ Dari studi kasus diatas, terciptalah sebuah program. Program ini dibuat sebagai 
 
         1. User memasukkan password.
         2. Program membaca isi password dan menghitung:
-            a. jumlah angka
-            b. jumlah huruf kecil
-            c. jumlah huruf besar
-            d. jumlah karakter spesial
+            a. Panjang password
+            b. jumlah angka
+            c. jumlah huruf kecil
+            d. jumlah huruf besar
+            e. jumlah karakter spesial
         3. Program melakukan pengecekan khusus:
-            a. apakah password mengandung pola abstrak
-            b. apakah password berakhir dengan "123"
+            a. apakah password mengandung pola dua huruf non-vokal berbeda yang tidak bernilai umum (abstrak)
+            b. apakah password berakhir dengan "123" (tuwaga)
         4. Program menentukan kategori password:
-            a. Weak (Lemah)
-            b. Medium (Sedang)
-            c. Strong (Kuat)
-            d. Very Strong (Sangat Kuat)
+            a. Valid
+            b. Invalid
+            c. Weak (Lemah)
+            d. Medium (Sedang)
+            e. Strong (Kuat)
+            f. Very Strong (Sangat Kuat)
         5. Jika password masih terlalu lemah atau invalid,
         program meminta user memasukkan ulang password.
         6. Program memberikan:
-            a. saran perbaikan password
-            b. rekomendasi password yang lebih kuat
+            a. Hasil dan saran
+            b. saran perbaikan password
+            c. rekomendasi password yang lebih kuat
+            d. Dapat memilih untuk cek password lagi.
 
 2. Cara Program Mengecek Jenis Karakter
 
@@ -108,7 +123,7 @@ A. Mengecek apakah password valid
     if (n >= 8) valid = true;
     Password harus minimal 8 karakter agar valid.
 
-B. Mengecek apakah password Weak
+B. Mengecek apakah password lemah
 
     Weak berarti password terlalu sederhana.
     Password dianggap tidak Weak jika:
@@ -156,7 +171,7 @@ E. Menentukan Very Strong
         a. Panjang minimal 12
         b. Mengandung semua jenis karakter (angka, huruf kecil, huruf besar, simbol)
         c. Simbol >= 3
-        d. Tidak abstrak
+        d. Password terdeteksi sebagai abstrak
 
     Contoh Very Strong:
         “Abc!!12@#Xyz”
@@ -165,16 +180,19 @@ E. Menentukan Very Strong
 
 📌Simpelnya :
 
-    1. Hitung jumlah huruf kecil, besar, angka, simbol
-    2. Deteksi abstrak?
-    3. Deteksi ada "123" di akhir?
-    4. Cek validitas (>= 8)
-    5. Jika password tidak terlalu sederhana → bukan weak
-    6. Jika valid dan punya ≥2 jenis → Medium
-    7. Jika valid dan punya ≥3 jenis + huruf besar → Strong
-    8. Jika panjang ≥12 + lengkap semua jenis → Very Strong
-    9. Jika weak/medium → tampilkan saran
-    10. Jika strong/verystrong → tampilkan level
+    1. Program menampilkan banner/ intro program.
+    2. User memasukkan password.
+    3. Program melakukan pengecekan karakter.
+    4. Program mengevaluasi level password:
+        - invalid?
+        - weak?
+        - medium?
+        - strong?
+        - very strong?
+    5. Program memberikan hasil dan saran.
+    6. User diminta memilih:
+        - cek password lagi → kembali ke langkah 2
+        - selesai → program berhenti
 
 ## ⚠️Syarat Setiap Level Password 
     🔴 Password Lemah
