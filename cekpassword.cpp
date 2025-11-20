@@ -2,6 +2,8 @@
 #include <ctime>
 #include <cstdlib>
 using namespace std;
+void garis();
+void awal();
 
 int main(){
     bool valid=false, weak=true;
@@ -57,6 +59,12 @@ int main(){
                 if(pass[i]==special[j]){ hash[3]=indspec; indspec++; }
             }
         }
+        int ada=0;
+        for(int i=0; i<4; i++){
+            if(hash[i]>0){
+                ada++;
+            }
+        }
 
         for(int i=1; i<n; i++){
             string vokal="aiueoAIUEO";
@@ -83,6 +91,7 @@ int main(){
            !(hash[0]!=0 && hash[3]==0 && !abstrak && tuwaga)){
             weak=false;
         }
+        
 
         if(n>=8) valid=true;
 
@@ -96,7 +105,7 @@ int main(){
             medium=true;
             weak=false;
         }
-
+    
         if(valid &&
            ((hash[0]>0 && hash[1]>0 && hash[2]>0) ||
             (hash[0]>0 && hash[1]>0 && hash[3]>0) ||
@@ -116,8 +125,8 @@ int main(){
             weak=false;
         }
 
-        if(valid && hash[0]+hash[1]+hash[2]+hash[3] == 1){
-            weak=false;
+        if(valid && ada== 1){
+            weak=true;
         }
 
         if(!valid){
@@ -181,7 +190,8 @@ int main(){
         }
 
         if(valid && !weak){
-            cout << endl << "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : ";
+            cout << endl << "Apakah anda ingin mengecek password lain?" << endl;
+            cout << "ketik 1 untuk ya: " << endl;
             cin >> pilihan;
 
             if(pilihan != 1){
