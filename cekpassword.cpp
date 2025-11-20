@@ -5,7 +5,7 @@
 #include <cstdlib>
 using namespace std;
 void garis();
-void awal(); // ini adalah
+void awal(); 
 
 int main(){
     bool valid=false,weak=true;
@@ -58,7 +58,7 @@ int main(){
                 hash[0]=indnum; indnum++;
             }
         }
-    }
+    } //aiaiaiaia
     
     for(int i=0; i<n; i++){
         for(int j=0; j<27; j++){
