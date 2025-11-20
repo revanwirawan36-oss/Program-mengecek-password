@@ -128,7 +128,7 @@ int main(){
         weak = false;
     }
 
-   if (n >= 12 && hash[0] > 0 && hash[1] > 0 && hash[2] > 0 && hash[3] >= 3 && !abstrak){
+   if (n >= 12 && hash[0] > 0 && hash[1] > 0 && hash[2] > 0 && hash[3] >= 3 && abstrak){
         verystrong = true;
         strong = false;
         medium = false;
