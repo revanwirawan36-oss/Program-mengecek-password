@@ -215,7 +215,7 @@ void awal(){
     cout << "|                          PROGRAM PENGECEKAN PASSWORD                                 |\n";
     cout << "|      Program C++ sederhana untuk cek validitas dan tingkat kekuatan password         |\n";
     cout << "|                                                                                      |\n";
-    cout << "|              RULES: password yang dimasukkan harus 8 digit atau lebih dan tanpa spasi|\n";
+    cout << "|         RULES: password yang dimasukkan harus 8 digit atau lebih dan tanpa spasi     |\n";
     cout << "|               ****************************************************                   |\n";
     cout << "|                                                                                      |\n";
     cout << "|                         **********************************                           |\n";
