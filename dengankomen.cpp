@@ -53,7 +53,7 @@ int main(){ //dalam c++ minimal memiliki satu fungsi main
         }
     }
     
-    for(int i=0; i<n; i++){ //looping untuk huruf special
+    for(int i=0; i<n; i++){ //looping untuk angka
         for(int j=0; j<10; j++){ //berhenti di <10 karena mengikuti banyaknya nilai angka
             if(pass[i]==numbers[j]){
                 hash[0]=indnum; indnum++; //numbers ada pada indeks ke0, nilai awal 1, dan akan terus bertambah mengikuti banyaknya angka yg diinputkan dalam password
