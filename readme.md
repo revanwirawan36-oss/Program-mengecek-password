@@ -258,4 +258,86 @@ Kode berikut menangani:
 - Pembuatan rekomendasi password otomatis
 - Opsi untuk mengecek password lain
 
+# Penjelasan Alur Kerja Kode Rekomendasi Password
+
+Bagian kode ini bertugas memberikan *rekomendasi password* ketika password yang dimasukkan pengguna masih **tidak valid**, **lemah (weak)**, atau **menengah (medium)**. Berikut penjelasan alur kerjanya:
+
+---
+
+## 🔍 1. Mengecek kondisi password
+Program masuk ke blok rekomendasi jika:
+- `valid` bernilai false, atau
+- password termasuk kategori `weak`, atau
+- password termasuk kategori `medium`.
+
+Jika salah satu terpenuhi, program mulai membangun rekomendasi berdasarkan password awal pengguna (`pass`).
+
+---
+
+## 🎲 2. Menghasilkan karakter acak
+Program menyiapkan karakter acak dari empat kategori:
+- Angka (`0–9`)
+- Huruf kecil (`a–z`)
+- Huruf besar (`A–Z`)
+- Karakter spesial
+
+Nilai acak ini dipakai ketika terdapat kategori karakter yang hilang.
+
+---
+
+## 🧩 3. Jika tidak ada kekurangan karakter (`kurang <= 0`)
+Program hanya menambahkan karakter dari kategori yang *belum ada* pada password:
+- Jika angka hilang → tambah angka acak  
+- Jika huruf kecil hilang → tambah huruf kecil acak  
+- Jika huruf besar hilang → tambah huruf besar acak  
+- Jika karakter spesial hilang → tambah karakter spesial acak  
+
+Tujuan: membuat password memenuhi semua kategori karakter.
+
+---
+
+## 🔁 4. Jika jumlah karakter kurang tetapi semua kategori sudah lengkap
+Apabila `kurang > 0` namun seluruh kategori karakter sudah muncul (`hash[] != 0` semua), program:
+- Membuat salinan password (`temporer`)
+- Melipatgandakannya hingga maksimal 8 karakter
+
+Ini adalah cara cepat untuk memenuhi panjang minimum tanpa karakter baru.
+
+---
+
+## 🔧 5. Jika jumlah karakter kurang dan ada kategori yang hilang
+Jika:
+- `kurang > 0`, dan
+- Ada kategori karakter yang hilang
+
+Program akan mengulang proses penambahan karakter:
+- Selama `kurang > 0`, tambahkan kategori yang hilang satu per satu
+- Setiap penambahan mengurangi nilai `kurang`
+
+Loop berakhir ketika password mencapai panjang minimum.
+
+---
+
+## ✔️ 6. Jika password valid dan tidak lemah
+Jika password sudah valid dan bukan weak:
+- Program bertanya apakah pengguna ingin mengecek password lain
+- Jika tidak, program menutup eksekusi
+
+---
+
+## 📌 Ringkasan Alur
+1. Cek kategori password (valid/weak/medium).  
+2. Jika perlu, tampilkan rekomendasi berdasarkan:
+   - Karakter kategori yang hilang  
+   - Kekurangan panjang minimum  
+3. Tambah karakter acak sesuai kebutuhan  
+4. Jika password sudah valid → tawarkan untuk cek password lain  
+
+---
+
+Kode ini memastikan setiap password yang dimasukkan dapat diperbaiki dengan:
+- Menambah kategori karakter yang hilang  
+- Mencapai panjang minimum  
+- Menghasilkan kombinasi yang lebih kuat  
+
 
