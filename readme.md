@@ -119,7 +119,7 @@ Program juga memberikan penjelasan kenapa password lemah, saran agar password le
     
  5. Cara Kerja Tampilan Memberitahukan User Kriteria Passwordnya
  
-     (Level password anda adalah: ... )
+      (Level password anda adalah: ... )
             a. Valid 
             b. Invalid : Password yang anda masukkan invalid!
             c. Weak (Lemah) : Password yang anda buat terlalu mudah!
@@ -127,17 +127,17 @@ Program juga memberikan penjelasan kenapa password lemah, saran agar password le
             e. Strong (Kuat)
             f. Very Strong (Sangat Kuat)
     
-    Jika password lemah, medium, atau kuat akan menampilkan syarat karakter apa saja yang perlu ditambahkan ulang. Seperti :
-        - Password anda terlalu mudah, tambahkan angka agar lebih kuat
-        - Tambahkan huruf kecil untuk variasi karakter.
-        - Tambahkan huruf besar agar password lebih sulit ditebak.
-        - Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan.
+     Jika password lemah, medium, atau kuat akan menampilkan syarat karakter apa saja yang perlu ditambahkan ulang. Seperti :
+         - Password anda terlalu mudah, tambahkan angka agar lebih kuat
+         - Tambahkan huruf kecil untuk variasi karakter.
+         - Tambahkan huruf besar agar password lebih sulit ditebak.
+         - Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan.
 
  6. Akhir Program
-    Ketika password sudah valid dan tidak lemah, user akan diberikan pilihan untuk kembali mencoba cek password lain atau tidak.
-        "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : "
-    Jika user memilih 1, maka program akan dijalankan kembali.
-    Jika user memilih 2, maka program selesai
+      Ketika password sudah valid dan tidak lemah, user akan diberikan pilihan untuk kembali mencoba cek password lain atau tidak.
+         "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : "
+      Jika user memilih 1, maka program akan dijalankan kembali.
+      Jika user memilih 2, maka program selesai
 
 ## ♻️Alur Logika IF–ELSE 
 
