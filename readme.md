@@ -249,3 +249,28 @@ E. Menentukan Very Strong
     Mengandung minimal 3 karakter spesial
     Bersifat Abstrak
     Kombinasi ini langsung dianggap paling aman
+
+    ## Bagian Program: Saran & Rekomendasi Password
+
+Kode berikut menangani:
+- Saran perbaikan password
+- Penentuan level kekuatan password
+- Pembuatan rekomendasi password otomatis
+- Opsi untuk mengecek password lain
+
+### 1. Saran Perbaikan
+
+```cpp
+if (hash[0] == 0) {
+    cout << "- Password anda terlalu mudah, tambahkan angka agar lebih kuat." << endl;
+}
+if (hash[1] == 0) {
+    cout << "- Tambahkan huruf kecil untuk variasi karakter." << endl;
+}
+if (hash[2] == 0) {
+    cout << "- Tambahkan huruf besar agar password lebih sulit ditebak." << endl;
+}
+if (hash[3] == 0) {
+    cout << "- Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan." << endl;
+}
+
