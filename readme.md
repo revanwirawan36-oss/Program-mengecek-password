@@ -195,22 +195,34 @@ E. Menentukan Very Strong
         - selesai → program berhenti
 
 ## ⚠️Syarat Setiap Level Password 
+
+    ❌ Password Invalid
+    Password dikategorikan invalid jika panjang password kurang dari 8 karakter
+
     🔴 Password Lemah
     Kurang dari 8 karakter
+    Hanya menggunakan huruf biasa
     Tidak mengandung angka
     Tidak mengandung karakter spesial
+    Tidak Abstrak
+    Tiga karakter terakhir adalah 123
     Terlalu banyak huruf yang mudah ditebak
 
     🟡 Password Medium
     Sudah valid (≥ 8 karakter)
-    Mengandung huruf besar minimal 2
+    Mengandung minimal dua jenis karakter
     Tapi belum memenuhi syarat "kuat" atau "sangat kuat"
 
     🟢 Password Kuat
+    Panjang ≥ 8 karakter (valid)
+    Mengandung minimal tiga jenis karakter
     Mengandung angka
     Tidak diakhiri dengan “123”
     (kecuali sudah ada huruf besar dan angka)
 
     🔵 Password Sangat Kuat
+    Panjang minimal 12 karakter
+    Mengandung angka, huruf kecil, huruf besar
     Mengandung minimal 3 karakter spesial
+    Bersifat Abstrak
     Kombinasi ini langsung dianggap paling aman
