@@ -135,7 +135,7 @@ int main(){
         medium = false;
         weak = false;
     }
-
+    
     if(!valid){
         cout <<"Password yang anda masukkan invalid! ";
     }
@@ -182,8 +182,14 @@ if(!weak && valid){
         if(hash[2]==0) cout << uppercase[randomupcase];
         if(hash[3]==0) cout << special[randomspecial];
         }
-
-        if(kurang>0){
+        if(kurang>0 && hash[0]!=0 && hash[1]!=0 && hash[2]!=0 && hash[3]!=0){
+            string temporer=pass;
+            while(temporer.length()<8){
+            temporer+=temporer;
+            } cout << temporer;
+            
+        }
+        else if(kurang>0){
         while(1>0){
         if(hash[0]==0){ cout << numbers[randomangka]; kurang--;}
         if(hash[1]==0){ cout << lowercase[randomlowcase]; kurang--;}
