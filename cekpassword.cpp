@@ -193,6 +193,24 @@ if(!weak && valid){
     }
     
     }
+    cout << endl;
+
+        cout << "Mau cek password lain? 1. Ya 2. Tidak : ";
+        cin >> pilihan;
+
+        if (pilihan != 1) {
+            cout << "Program selesai." << endl;
+        }
+    }
+    cout << endl;
+
+        cout << "Mau cek password lain? 1. Ya 2. Tidak : ";
+        cin >> pilihan;
+
+        if (pilihan != 1) {
+            cout << "Program selesai." << endl;
+        }
+    }
 }
     return 0;
 }
@@ -212,3 +230,7 @@ void awal(){
     cout << "|                                                                                      |\n";
     cout << "+======================================================================================+\n";
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
