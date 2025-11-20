@@ -5,7 +5,7 @@
 #include <cstdlib>
 using namespace std;
 void garis();
-void awal()
+void awal(); // ini adalah
 
 int main(){
     bool valid=false,weak=true;
