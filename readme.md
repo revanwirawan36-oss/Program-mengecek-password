@@ -64,11 +64,12 @@ Program juga memberikan penjelasan kenapa password lemah, saran agar password le
         3. Program melakukan pengecekan khusus:
             a. apakah password mengandung pola dua huruf non-vokal berbeda yang tidak bernilai umum (abstrak)
             b. apakah password berakhir dengan "123" (tuwaga)
-        4. Program menentukan kategori password:
-            a. Valid
-            b. Invalid
-            c. Weak (Lemah)
-            d. Medium (Sedang)
+        4. Program menentukan kategori password serta memberitahukan user mengapa password yang di input berkategori tersebut.
+        (Level password anda adalah: ... )
+            a. Valid 
+            b. Invalid : Password yang anda masukkan invalid!
+            c. Weak (Lemah) : Password yang anda buat terlalu mudah!
+            d. Medium (Sedang) : password yang anda buat terlalu basic
             e. Strong (Kuat)
             f. Very Strong (Sangat Kuat)
         5. Jika password masih terlalu lemah atau invalid,
@@ -115,6 +116,28 @@ Program juga memberikan penjelasan kenapa password lemah, saran agar password le
         "pass4123" → true
 
         Ini mempengaruhi aturan ke-Strong.
+    
+ 5. Cara Kerja Tampilan Memberitahukan User Kriteria Passwordnya
+ 
+     (Level password anda adalah: ... )
+            a. Valid 
+            b. Invalid : Password yang anda masukkan invalid!
+            c. Weak (Lemah) : Password yang anda buat terlalu mudah!
+            d. Medium (Sedang) : password yang anda buat terlalu basic
+            e. Strong (Kuat)
+            f. Very Strong (Sangat Kuat)
+    
+    Jika password lemah, medium, atau kuat akan menampilkan syarat karakter apa saja yang perlu ditambahkan ulang. Seperti :
+        - Password anda terlalu mudah, tambahkan angka agar lebih kuat
+        - Tambahkan huruf kecil untuk variasi karakter.
+        - Tambahkan huruf besar agar password lebih sulit ditebak.
+        - Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan.
+
+ 6. Akhir Program
+    Ketika password sudah valid dan tidak lemah, user akan diberikan pilihan untuk kembali mencoba cek password lain atau tidak.
+        "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : "
+    Jika user memilih 1, maka program akan dijalankan kembali.
+    Jika user memilih 2, maka program selesai
 
 ## ♻️Alur Logika IF–ELSE 
 
