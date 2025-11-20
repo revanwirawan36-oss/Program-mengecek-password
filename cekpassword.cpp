@@ -14,10 +14,11 @@ int main(){
     int hash[4]={0,0,0,0};
     awal();
     int cekbrp=0;
+    int pilihan=0;
 
     srand(time(NULL));
 
-    while(!valid || weak){
+    while(!valid || weak || pilihan==1){
         
     for(int i = 0; i < 4; i++){
         hash[i] = 0;
@@ -193,24 +194,15 @@ if(!weak && valid){
     }
     
     }
-    cout << endl;
-
-        cout << "Mau cek password lain? 1. Ya 2. Tidak : ";
+        if(valid && !weak){
+        cout << endl << "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : ";
         cin >> pilihan;
 
         if (pilihan != 1) {
             cout << "Program selesai." << endl;
         }
     }
-    cout << endl;
 
-        cout << "Mau cek password lain? 1. Ya 2. Tidak : ";
-        cin >> pilihan;
-
-        if (pilihan != 1) {
-            cout << "Program selesai." << endl;
-        }
-    }
 }
     return 0;
 }
@@ -230,7 +222,3 @@ void awal(){
     cout << "|                                                                                      |\n";
     cout << "+======================================================================================+\n";
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
