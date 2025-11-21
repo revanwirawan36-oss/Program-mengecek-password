@@ -318,10 +318,6 @@ Loop berakhir ketika password mencapai panjang minimum.
 
 ---
 
-## ✔️ 6. Jika password valid dan tidak lemah
-Jika password sudah valid dan bukan weak:
-- Program bertanya apakah pengguna ingin mengecek password lain
-- Jika tidak, program menutup eksekusi
 
 # Penjelasan Workflow Fungsi `rand()` dalam Logika Rekomendasi Password
 
@@ -410,5 +406,7 @@ Karena array `special[]` kemungkinan berisi **27 karakter spesial**.
 Dengan demikian, seluruh logika random pada kode ini bergantung pada empat panggilan awal `rand()` dan bukan pada pengacakan yang berulang di dalam loop.
 
 # Penjelasan Bagian Akhir Program
-user diminta untuk memilih apakah mau memasukkan password lagi atau tidak
+Jika password sudah valid dan bukan weak:
+- Program bertanya apakah pengguna ingin mengecek password lain
+- Jika tidak, program menutup eksekusi
 
