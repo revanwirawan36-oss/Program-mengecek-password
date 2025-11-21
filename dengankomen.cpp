@@ -145,7 +145,7 @@ int main(){ //dalam c++ minimal memiliki satu fungsi main
     }
     
     if(!valid){ //ketika password invalid menampilkan akan menampilkan ouput dibawah
-        cout <<"Password yang anda masukkan invalid! "; 
+        cout <<"Password yang anda masukkan invalid! "; //akan cout ini
     }
     if(weak && !valid){ 
         cout << "serta ";
