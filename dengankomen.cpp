@@ -197,8 +197,8 @@ if(!weak && valid){
         if(kurang>0 && hash[0]!=0 && hash[1]!=0 && hash[2]!=0 && hash[3]!=0){ //Jika panjang password belum 8, tetapi semua kategori (angka, huruf kecil, besar, spesial) sudah ada
             string temporer=pass; // Membuat string sementara untuk menambah panjang password
             while(temporer.length()<8){ //// Menggandakan password hingga mencapai minimal 8 karakter
-            temporer+=temporer; // Menampilkan password yang sudah diperpanjang
-            } cout << temporer; // Jika panjang password kurang dari 8 dan ada kategori karakter yang hilang
+            temporer+=temporer; // memperpanjang password
+            } cout << temporer; // Menampilkan password yang sudah diperpanjang
             
         }
         //menambahkan karakter sampai panjang minimum tercapai
@@ -214,9 +214,10 @@ if(!weak && valid){
     
     }
         if(valid && !weak){ //mengecek kondisi password
-        cout << endl << "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : ";
+        cout << endl << "Apakah anda ingin mengecek password lain? " << endl;
+        cout << "ketik 1 untuk ya: ";
         cin >> pilihan;
-
+        cout << endl;
         if (pilihan != 1) {//mengakhiri program
             cout << "Program selesai." << endl;
         }
