@@ -16,7 +16,7 @@
             b. apakah password berakhir dengan "123" (tuwaga)
         4. Program menentukan kategori password serta memberitahukan user mengapa password yang di input berkategori tersebut.
         (Level password anda adalah: ... )
-            a. Valid 
+            a. Valid
             b. Invalid : Password yang anda masukkan invalid!
             c. Weak (Lemah) : Password yang anda buat terlalu mudah!
             d. Medium (Sedang) : password yang anda buat terlalu basic
@@ -30,7 +30,7 @@
             c. rekomendasi password yang lebih kuat
             d. Dapat memilih untuk cek password lagi.
 
-2. Cara Program Mengecek Jenis Karakter
+3. Cara Program Mengecek Jenis Karakter
 
        a. Program membuat array:
             hash[0] = jumlah angka
@@ -45,7 +45,7 @@
             angka → hash[0] bertambah
             simbol → hash[3] bertambah
 
-3. Cara Kerja Deteksi "abstrak"
+4. Cara Kerja Deteksi "abstrak"
 
         Password dianggap abstrak jika:
         a. 2 huruf berturut-turut bukan vokal
@@ -57,7 +57,7 @@
         Contoh abstrak:
         "xqzz", "rklpt", "bxng"
 
- 4. Cara Kerja Deteksi "tuwaga"
+ 5. Cara Kerja Deteksi "tuwaga"
 
         Jika password berakhir dengan “123” maka dianggap tuwaga = true.
 
@@ -67,10 +67,10 @@
 
         Ini mempengaruhi aturan ke-Strong.
     
- 5. Cara Kerja Tampilan Memberitahukan User Kriteria Passwordnya
+ 6. Cara Kerja Tampilan Memberitahukan User Kriteria Passwordnya
  
       (Level password anda adalah: ... )
-             a. Valid 
+             a. Valid
              b. Invalid : Password yang anda masukkan invalid!
              c. Weak (Lemah) : Password yang anda buat terlalu mudah!
              d. Medium (Sedang) : password yang anda buat terlalu basic
@@ -83,11 +83,11 @@
          - Tambahkan huruf besar agar password lebih sulit ditebak.
          - Tambahkan karakter spesial seperti !@#$% untuk meningkatkan keamanan.
 
- 6. Akhir Program
-      Ketika password sudah valid dan tidak lemah, user akan diberikan pilihan untuk kembali mencoba cek password lain atau tidak.
-         "Apakah anda ingin mengecek password lain? 1. Ya 2. Tidak : "
+ 8. Akhir Program
+      Ketika password sudah valid dan tidak lemah, user akan diberikan pilihan untuk kembali mencoba cek password lain atau          tidak.
+    "Apakah anda ingin mengecek password lain? ketik 1 untuk ya : "
       Jika user memilih 1, maka program akan dijalankan kembali.
-      Jika user memilih 2, maka program selesai
+      Jika user memilih yg lain, maka program selesai
 
 ## ♻️Alur Logika IF–ELSE 
 
