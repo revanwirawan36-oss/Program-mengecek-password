@@ -1,3 +1,4 @@
+//bagian revan
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -94,7 +95,7 @@ int main(){
         
 
         if(n>=8) valid=true;
-
+//bagian myranda tiarayustika
         if(valid &&
            ((hash[0]>0 && hash[1]>0) ||
             (hash[0]>0 && hash[2]>0) ||
@@ -136,7 +137,7 @@ int main(){
         if(weak && !valid){
             cout << "serta ";
         }
-
+//bagian siti suhaira
         if(weak||medium){
             if(weak) cout << "Password yang anda buat terlalu mudah!";
             if(medium) cout << "password yang anda buat terlalu basic";
@@ -159,7 +160,7 @@ int main(){
         }
 
         cout << endl;
-
+//bagian nadia putri azahra
         if(!valid || weak || medium){
             cout << "Rekomendasi Password: " << pass;
 
@@ -188,7 +189,7 @@ int main(){
                 }
             }
         }
-
+//bagian riska febriani
         if(valid && !weak){
             cout << endl << "Apakah anda ingin mengecek password lain?" << endl;
             cout << "ketik 1 untuk ya: " << endl;
@@ -202,7 +203,7 @@ int main(){
 
     return 0;
 }
-
+//bagian revan & nadia putri azahra (2517051034)
 void garis(){
     cout << endl<<"====================================================================================================";
 }
