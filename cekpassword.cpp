@@ -66,7 +66,7 @@ int main(){
                 ada++;
             }
         }
-
+        int abstrakk=0;
         for(int i=1; i<n; i++){
             string vokal="aiueoAIUEO";
             bool prev=vokal.find(pass[i-1]) != string::npos;
@@ -77,8 +77,8 @@ int main(){
                pass[i-1]!='f' && pass[i-1]!='F' &&
                pass[i-1]!='v' && pass[i-1]!='V' &&
                !angka){
+                abstrakk++;
                 abstrak=true; 
-                break;
             }
         }
 
@@ -93,9 +93,9 @@ int main(){
             weak=false;
         }
         
-
+        //bagian myranda
         if(n>=8) valid=true;
-//bagian myranda tiarayustika
+
         if(valid &&
            ((hash[0]>0 && hash[1]>0) ||
             (hash[0]>0 && hash[2]>0) ||
@@ -129,7 +129,17 @@ int main(){
         if(valid && ada== 1){
             weak=true;
         }
-
+        if(valid && ada== 1 && (hash[1]>0 ^ hash[2]>0) && abstrak){
+            medium=true;
+            weak=false;
+        }
+        if(valid && ada== 1 && (hash[1]>0 ^ hash[2]>0) && abstrakk>=3){
+            strong=true;
+            medium=false;
+            weak=false;
+        }
+        
+//bagian sitisuhaira
         if(!valid){
             cout <<"Password yang anda masukkan invalid! ";
         }
@@ -137,31 +147,33 @@ int main(){
         if(weak && !valid){
             cout << "serta ";
         }
-//bagian siti suhaira
-        if(weak||medium){
-            if(weak) cout << "Password yang anda buat terlalu mudah!";
-            if(medium) cout << "password yang anda buat terlalu basic";
-            cout << endl << "Saran untuk meningkatkan keamanan password:" << endl;
+        if(weak) cout << "Password yang anda buat terlalu mudah!";
+        if(medium) cout << "password yang anda buat terlalu basic";
 
+        cout << endl;
+        cout <<endl;
+        cout << "Level password anda adalah: ";
+        if(weak) cout << "lemah";
+        else if(medium) cout << "medium";
+        else if(strong) cout << "kuat";
+        else if(verystrong) cout << "sangatkuat";
+
+        int kurang=8-pass.length();
+        cout << endl ;
+
+
+//bagian sitisuhaira
+
+        if(!strong && !verystrong){
+            cout << endl << "Saran untuk meningkatkan keamanan password:" << endl;
             if(hash[0]==0) cout << "- Tambahkan angka." << endl;
             if(hash[1]==0) cout << "- Tambahkan huruf kecil." << endl;
             if(hash[2]==0) cout << "- Tambahkan huruf besar." << endl;
             if(hash[3]==0) cout << "- Tambahkan karakter spesial." << endl;
         }
-
-        int kurang=8-pass.length();
-
-        if(!weak && valid){
-            cout << "Level password anda adalah: ";
-            if(medium) cout << "medium";
-            else if(strong) cout << "kuat";
-            else if(verystrong) cout << "sangatkuat";
-            else cout << "lemah";
-        }
-
-        cout << endl;
-//bagian nadia putri azahra
-        if(!valid || weak || medium){
+        //bagian nadia putri azahra
+        cout <<endl;
+        if(!valid || (!strong && !verystrong)){
             cout << "Rekomendasi Password: " << pass;
 
             int randomangka = rand() % 10;
@@ -189,7 +201,8 @@ int main(){
                 }
             }
         }
-//bagian riska febriani
+        cout <<endl;
+//bagian riska
         if(valid && !weak){
             cout << endl << "Apakah anda ingin mengecek password lain?" << endl;
             cout << "ketik 1 untuk ya: " << endl;
@@ -203,7 +216,7 @@ int main(){
 
     return 0;
 }
-//bagian revan & nadia putri azahra (2517051034)
+//bagian revan dan nadia putri azahra (517051034)
 void garis(){
     cout << endl<<"====================================================================================================";
 }
