@@ -193,11 +193,12 @@ int main(){
                 while(temp.length()<8) temp+=temp;
                 cout << temp;
             } else if(kurang>0){
-                while(kurang>0){
+                while(1>0){
                     if(hash[0]==0){ cout << numbers[randomangka]; kurang--; }
                     if(hash[1]==0){ cout << lowercase[randomlowcase]; kurang--; }
                     if(hash[2]==0){ cout << uppercase[randomupcase]; kurang--; }
                     if(hash[3]==0){ cout << special[randomspecial]; kurang--; }
+                    if(kurang<=0) break;
                 }
             }
         }
